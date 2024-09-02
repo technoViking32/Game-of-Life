@@ -1,0 +1,15 @@
+.grid{
+    display: grid;    
+    grid-template-columns: repeat(3, 13px);
+}
+
+ul{
+    list-style-type: none;
+    padding: 15px;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+li{
+    margin-top: -7px;
+}
