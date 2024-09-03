@@ -12,48 +12,82 @@
       href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="bord/style.css" />
   </head>
-  <body class="dark bg-[#f0f0f0] dark:bg-[#242424]">
+  <body class="bg-[#f0f0f0] dark:bg-[#242424]">
     <!--navbar with submenu-->
-    <div class="dark:bg-[#2a0329] h-full">
-    <nav class="bg-darkgreen font-['handjet']">
-      <div
-        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-6"
-      >
-        <a href="index.html" class="text-turquoise text-7xl font-['handjet'] dark:text-[#aa1fa1]"
-          >Game of life</a
+    <div class="dark:bg-[#1d1c1d] h-full">
+      <nav class="bg-darkgreen font-['handjet']">
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-6"
         >
-        <a href="#login" class="text-turquoise text-2xl dark:text-[#aa1fa1]">Login</a>
-      </div>
-    </nav>
-    <!--submenu met darkmode en rules pop up-->
-    <nav class="bg-greywhite shadow-lg dark:bg-winered ">
-      <div class="max-w-screen-xl px-4 py-3 mx-auto">
-        <div class="flex items-center justify-end">
-          <ul class="flex flex-row font-medium text-md">
-            <li>
-              <button href="#" class="text-winered hover:underline mr-8 dark:text-greywhite">Darkmode</button>
-            </li>
-            <li>
-              <a href="#" class="text-winered hover:underline mr-2 dark:text-greywhite">Rules</a>
-            </li>
-          </ul>
+          <a
+            href="index.html"
+            class="text-turquoise text-7xl font-['handjet'] dark:text-[#aa1fa1]"
+            >Game of life</a
+          >
+          <a href="#login" class="text-turquoise text-2xl dark:text-[#aa1fa1]"
+            >Login</a
+          >
+        </div>
+      </nav>
+      <!--submenu met darkmode en rules pop up-->
+      <nav class="bg-greywhite shadow-lg dark:bg-winered">
+        <div class="max-w-screen-xl px-4 py-3 mx-auto">
+          <div class="flex items-center justify-end">
+            <ul class="flex flex-row font-medium text-md">
+              <li>
+                <button
+                  href="#"
+                  class="text-winered hover:underline mr-8 dark:text-greywhite"
+                >
+                  Darkmode
+                </button>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-winered hover:underline mr-2 dark:text-greywhite"
+                  >Rules</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--Flexbox/ game met reclame-->
+      <div class="mt-10 p-4">
+        <div class="flex flex-row">
+          <!--reclame 1-->
+          <div class="basis-1/6 mx-4 px-2">
+            <img
+              src="https://images.macrumors.com/article-new/2017/11/iPhone_X_reviewsl.gif"
+              alt=""
+              class="w-full h-full"
+            />
+          </div>
+          <!--Game moet hier in geplaatst worden-->
+          <div class="basis-[66%]">
+            <div id="gridContainer" class="w-full flex justify-center"></div>
+
+            <div class="controls text-center">
+              <button id="start"><span>Start</span></button>
+              <button id="clear"><span>Clear</span></button>
+              <button id="random"><span>Random</span></button>
+            </div>
+          </div>
+          <!--reclame 2-->
+          <div class="basis-1/6 mx-4 px-2">
+            <img
+              src="https://www.campaignmonitor.com/wp-content/uploads/2016/01/NewBlankCanvasEmail_02.gif"
+              alt=""
+              class="w-full h-full"
+            />
+          </div>
         </div>
       </div>
-    </nav>
-
-    <!--Flexbox/ game met reclame-->
-    <div class="mt-10 p-4 ">
-      <div class="flex flex-row">
-        <!--reclame 1-->
-        <div class="basis-1/6 mx-4 px-2"><img src="https://images.macrumors.com/article-new/2017/11/iPhone_X_reviewsl.gif" alt="" class="w-full h-full"> </div>
-        <!--Game moet hier in geplaatst worden-->
-        <div class="basis-[66%]"><img src="https://images.ctfassets.net/xa93kvziwaye/2TsunNvQIEqgQLNugin3YN/311e95ec06771ddf1f161a3f439ae1c2/hero-image_pink-power-a-brief-history-of-kirby.jpg?fm=webp&f=top&fit=fill&w=1124&h=506" alt="kurb" class="w-full"></div>
-        <!--reclame 2-->
-        <div class="basis-1/6  mx-4 px-2"><img src="https://www.campaignmonitor.com/wp-content/uploads/2016/01/NewBlankCanvasEmail_02.gif" alt="" class="w-full h-full"></div>
-      </div>
     </div>
-    
-    </div>
+    <script src="./bord/script.js" async defer></script>
   </body>
 </html>
