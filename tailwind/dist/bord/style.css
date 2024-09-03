@@ -20,7 +20,8 @@ span {
 
 #start,
 #clear,
-#random {
+#random,
+#buttonColor {
     padding: .75em;
     border-radius: 5px;
     border: none;    
