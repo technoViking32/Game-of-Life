@@ -127,12 +127,12 @@ function clearButtonHandler() {
     startButton.innerHTML = "Start";
     clearTimeout(timer);
 
-    // Get all cells and reset their class and background color
+    
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             let cell = document.getElementById(i + "_" + j);
             cell.setAttribute("class", "dead");
-            cell.style.backgroundColor = ""; // Reset to default (no color)
+            cell.style.backgroundColor = ""; 
         }
     }
     
@@ -220,25 +220,20 @@ function countNeighbors(row, col) {
 }
 window.onload = initialize;
 
-let selectedColor = "#ff0000"; // Default color
+let selectedColor = "#ff0000"; 
 
-// Event listener for the color picker button
 var button = document.getElementById("buttonColor");
 
 button.onclick = function () {
-    // Get the selected color value from the color picker input
     selectedColor = document.getElementById("color-picker").value;
 
-    // Get all the cells that are currently "live"
     var liveCells = document.getElementsByClassName("live");
 
-    // Loop through all live cells and update their background color
     for (let i = 0; i < liveCells.length; i++) {
         liveCells[i].style.backgroundColor = selectedColor;
     }
 };
 
-// Update cellClickHandler to apply the selected color
 function cellClickHandler() {
     let rowcol = this.id.split("_");
     let row = rowcol[0];
@@ -247,26 +242,25 @@ function cellClickHandler() {
     let classes = this.getAttribute("class");
     if (classes.indexOf("live") > -1) {
         this.setAttribute("class", "dead");
-        this.style.backgroundColor = ""; // Reset to default color
+        this.style.backgroundColor = "";
         grid[row][col] = 0;
     } else {
         this.setAttribute("class", "live");
-        this.style.backgroundColor = selectedColor; // Apply selected color
+        this.style.backgroundColor = selectedColor; 
         grid[row][col] = 1;
     }
 }
 
-// Update the updateView function to reset dead cells to default color
 function updateView() {
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             let cell = document.getElementById(i + "_" + j);
             if (grid[i][j] == 0) {
                 cell.setAttribute("class", "dead");
-                cell.style.backgroundColor = ""; // Reset to default (no color)
+                cell.style.backgroundColor = ""; 
             } else {
                 cell.setAttribute("class", "live");
-                cell.style.backgroundColor = selectedColor; // Apply selected color
+                cell.style.backgroundColor = selectedColor; 
             }
         }
     }
