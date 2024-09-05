@@ -15,6 +15,6 @@ module.exports = {
     fill: ['dark'], // Enable dark variant for fill
   },
   plugins: [],
-  darkMode:"class",
+  darkMode:'class',
 }
 
