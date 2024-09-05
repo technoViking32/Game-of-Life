@@ -1,15 +1,26 @@
-.grid{
-    display: grid;    
-    grid-template-columns: repeat(3, 13px);
+#gridContainer {
+    padding-bottom: 10px;
 }
 
-ul{
-    list-style-type: none;
-    padding: 15px;
-    background-color: aquamarine;
-    border: 1px solid black;
+table {
+    background-color: #ffffff;
+    border-spacing: 0;
 }
 
-li{
-    margin-top: -7px;
+td {
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+td.dead {
+    background-color: transparent;
+}
+
+td.live {
+    background-color: #27e712;
+    border-radius: 10px;
 }
