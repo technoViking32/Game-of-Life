@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,14 +43,104 @@
         <div class="max-w-screen-xl px-4 py-3 mx-auto">
           <div class="flex items-center justify-end">
             <ul class="flex flex-row font-medium text-lg items-center ">
-              <li>
-                <li>
-                  <a
-                    href="#"
-                    class="text-winered hover:underline mr-5 dark:text-greywhite "
-                    >Rules</a
-                  >
-                </li>
+                  <div
+                  class="justify-center text-black"
+                >
+                  <details class="open">
+                    <!-- Knop zichtbaar maken -->
+                    <summary
+                      class="bg-blue-rounded-2xl block px-6 py-4 text-xl hover:duration-300 hover:text-white cursor-pointer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                        />
+                      </svg>
+                    </summary>
+            
+                    <!-- Content is pas te zien als de user erop klikt. -->
+                    <div
+                      class="bg-white rounded-2xl w-[90%] h-[90%] my-auto mx-auto absolute inset-0 text-gray-600 p-4 py-8"
+                    >
+                      <!-- Sluiten van pop up scherm-->
+                      <span
+                        onclick="document.querySelector('details').removeAttribute('open')"
+                        class="bg-gray-400 rounded-full flex items-center justify-center text-3xl font-bold uppercase absolute -right-4 -top-4 w-10 h-10 text-white hover:bg-blue-200 hover:duration-200 cursor-pointer"
+                      >
+                        X
+                      </span>
+            
+                      <!-- Titel -->
+                      <div>
+                        <div class="overflow-y-auto">
+                          <h1 class="text-2xl text-center text-black font-bold">
+                            Game of Life - Rules
+                          </h1>
+                        </div>
+                        <!--Regels aan de linkerkant-->
+                        <div class="flex justify-around">
+                        <div class="flex flex-col space-y-12">
+                          <div>
+                            <h3 class="text-2xl text-left text-black font-bold">
+                              For a space that is populated:
+                            </h3>
+                          </div>
+                          <div>
+                            <h3 class="text-2xl text-left text-black font-style: italic">
+                              Each cell with one or no neighbors dies, as if by soltitude
+                            </h3>
+                          </div>
+                          <div>
+                            <h3 class="text-2xl text-left text-black font-style: italic">
+                              Each cell with four or more neighbors dies, as if by
+                              overpopulation.
+                            </h3>
+                          </div>
+                          <div>
+                            <h3 class="text-2xl text-left text-black font-style: italic">
+                              Each cell with two or three neighbors survives.
+                            </h3>
+                          </div>
+                          <div>
+                            <h3 class="text-2xl text-left text-black font-bold">
+                              For a space that is empty or unpopulated:
+                            </h3>
+                          </div>
+                          <div>
+                            <h3 class="text-2xl text-left text-black font-style: italic">
+                              Each cell with three neighbors becomes populated.
+                            </h3>
+                          </div>
+                        </div>
+                        <!--afbeeldingen aan de rechterkant-->
+                        <div class="flex-col w-[320px] h-[50px]">
+                          <div>
+                            <img src="regel 1 afbeelding.png" alt="Game of Life rule img" />
+                          </div>
+                          <div>
+                            <img src="regel 2 afbeelding.png" alt="Game of Life rule img" />
+                          </div>
+                          <div>
+                            <img src="regel 3 afbeelding.png" alt="Game of Life rule img" />
+                          </div>
+                          <div>
+                            <img src="regel 4 afbeelding.png" alt="Game of Life rule img" />
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+                </div>
                 <button
                   href="#"
                   class="text-winered hover:underline  dark:text-greywhite"
@@ -132,7 +223,7 @@
     <!--Info over conway en de game zelf-->
     <div class="bg-greywhite dark:bg-gradient-to-b dark:from-darkgreen dark:to-turquoise py-16 text-center">
   <h1 class="text-5xl font-bold mb-6 dark:text-white">History</h1>
-  <p class="text-lg mb-16 text-gray-500 dark:text-gray-300 dark:text-white">Learn about John Horton Conway and his Game of Life</p>
+  <p class="text-lg mb-16  dark:text-white">Learn about John Horton Conway and his Game of Life</p>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-16 ">
     <!-- Conway Section -->
@@ -142,12 +233,12 @@
         alt="John Horton Conway"
         class="w-[800px] h-[450px] object-cover rounded-lg shadow-xl hover:shadow-md transition duration-300"
       />
-      <p class="text-lg py-10 dark:text-white leading-relaxed">
+      <p class="text-lg py-10 dark:text-black leading-relaxed">
         John Horton Conway was a British mathematician known for his work in several branches of mathematics,
         including group theory, cryptography, geometry, and number theory. He is best known for inventing the surreal
         numbers and the Game of Life. Conway passed away on April 11, 2020, due to COVID-19.
       </p>
-      <a href="#" class="text-winered hover:text-pink dark:text-white font-semibold">Read More →</a>
+      <a href="#" class="text-winered hover:text-pink dark:text-black font-semibold">Read More →</a>
     </div>
 
     <!-- Game of Life Section -->
@@ -157,12 +248,12 @@
         alt="Game of Life"
         class="w-[800px] h-[450px] object-cover rounded-lg shadow-xl hover:shadow-md transition duration-300"
       />
-      <p class="text-lg py-10 dark:text-white leading-relaxed">
+      <p class="text-lg py-10 dark:text-black leading-relaxed">
         The Game of Life, created by British mathematician John Conway in 1970, is a cellular automaton consisting of a
         two-dimensional grid with cells that can be "alive" or "dead". These cells evolve according to specific rules and
         can form various patterns over time. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
       </p>
-      <a href="#" class="text-winered hover:text-pink dark:text-white font-semibold">Explore Game of Life →</a>
+      <a href="#" class="text-winered hover:text-pink dark:text-black font-semibold">Explore Game of Life →</a>
     </div>
   </div>
 </div>
@@ -175,22 +266,19 @@
       </div>
     </footer>
     <div class="flex rounded-full mr-5 fixed bottom-1 right-0">
-      <i
-        class="fa fa-twitter-square bg-greywhite dark:bg-darkgreen dark:text-white"
-        style="font-size: 30px"
-      ></i>
-      <i
-        class="fa fa-facebook-square mx-5 bg-greywhite dark:bg-darkgreen dark:text-white"
-        style="font-size: 30px"
-      ></i>
-      <i
-        class="fa fa-github-square mr-5 bg-greywhite dark:bg-darkgreen dark:text-white"
-        style="font-size: 30px"
-      ></i>
-      <i
-        class="fa fa-linkedin-square bg-greywhite dark:bg-darkgreen dark:text-white"
-        style="font-size: 30px"
-      ></i>
+      <a href="https://twitter.com" aria-label="Twitter">
+        <i class="fa fa-twitter-square bg-greywhite dark:bg-darkgreen dark:text-white" style="font-size: 30px"></i>
+      </a>
+      <a href="https://facebook.com" aria-label="Facebook">
+        <i class="fa fa-facebook-square mx-5 bg-greywhite dark:bg-darkgreen dark:text-white" style="font-size: 30px"></i>
+      </a>
+      <a href="https://github.com" aria-label="GitHub">
+        <i class="fa fa-github-square mr-5 bg-greywhite dark:bg-darkgreen dark:text-white" style="font-size: 30px"></i>
+      </a>
+      <a href="https://linkedin.com" aria-label="LinkedIn">
+        <i class="fa fa-linkedin-square bg-greywhite dark:bg-darkgreen dark:text-white" style="font-size: 30px"></i>
+      </a>
+    </div>
     </div>
     <script src="./bord/script.js" async defer></script>
     <script src="./darkmode.js" async defer></script>
