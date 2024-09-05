@@ -22,3 +22,31 @@ themeSwitch.addEventListener("click" , () => {
         disableDarkmode();
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the details element
+    const detailsElement = document.querySelector("details");
+  
+    // Select the close button (the "X")
+    const closeButton = document.querySelector(".bg-gray-400");
+  
+    // Handle the close button click
+    closeButton.addEventListener("click", function () {
+      detailsElement.removeAttribute("open");
+    });
+  
+    // Optionally handle when the user clicks on the summary element to open/close the details
+    detailsElement.addEventListener("toggle", function () {
+      if (detailsElement.open) {
+        console.log("Details opened");
+      } else {
+        console.log("Details closed");
+      }
+    });
+  });
+
+  document.querySelector('.popup-overlay').addEventListener('click', function () {
+    document.querySelector('details').removeAttribute('open');
+  });
+  
+  
