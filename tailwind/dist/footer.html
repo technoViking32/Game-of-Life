@@ -1,4 +1,3 @@
-<!--Run taiwind-> type in terminal: cd tailwind -> npm run dev -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,8 +12,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="bord/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <body class=" bg-[#f0f0f0] dark:bg-[#242424] ">
+  <body class="bg-[#f0f0f0] dark:bg-[#242424]">
     <!--navbar with submenu-->
     <div class="dark:bg-[#1d1c1d] h-full">
       <nav class="bg-darkgreen font-['handjet']">
@@ -26,9 +29,12 @@
             class="text-turquoise text-7xl font-['handjet'] dark:text-[#aa1fa1]"
             >Game of life</a
           >
-          <button href="#login" class="text-turquoise text-2xl dark:text-[#aa1fa1]"
-            >Login</button
+          <button
+            href="#login"
+            class="text-turquoise text-2xl dark:text-[#aa1fa1]"
           >
+            Login
+          </button>
         </div>
       </nav>
       <!--submenu met darkmode en rules pop up-->
@@ -119,7 +125,87 @@
         </div>
       </div>
     </div>
-    
+
+    <!--Info over conway en de game zelf-->
+    <div
+      class="bg-greywhite dark:bg-gradient-to-r dark:from-turquoise dark:to-darkgreen py-10 text-center "
+    >
+    <h1 class="text-4xl mb-10">History</h1>
+      <div
+        class="flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0 md:space-x-6 "
+      >
+      
+        <div
+          class="flex flex-col items-center transform transition duration-500 hover:scale-105"
+        >
+          <img
+            src="https://static.scientificamerican.com/sciam/cache/file/9DB31FFE-197B-4787-A1E7D099F35B0873_source.jpg?crop=16%3A9%2Csmart&w=1920"
+            alt=""
+            class="w-[600px] h-[350px] rounded-lg shadow-2xl hover:shadow-sm"
+          />
+          <p
+            class="w-[500px] text-center py-4 dark:text-white text-lg leading-relaxed"
+          >
+            John Horton Conway was een Brits wiskundige, die veel publicaties op
+            zijn naam heeft staan. Hij was actief in verschillende deelgebieden
+            van de wiskunde, zoals de groepentheorie, cryptografie, meetkunde en
+            getaltheorie. Hij bedacht onder meer de surreële getallen. Conway
+            heeft aan de Universiteit van Cambridge gestudeerd, bleef daar tot
+            1986 college geven, maar werd dat jaar hoogleraar in de wiskunde aan
+            de Universiteit van Princeton. Hij was sinds 1981 Fellow of the
+            Royal Society. Hij overleed op 11 april 2020, drie dagen nadat hij
+            koorts had gekregen ten gevolge van COVID-19.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col items-center transform transition duration-500 hover:scale-105"
+        >
+          <img
+            src="https://conwaylife.com/w/images/b/b6/Gosperglidergun.gif"
+            alt=""
+            class="w-[600px] h-[350px] rounded-lg shadow-2xl hover:shadow-sm"
+          />
+          <p
+            class="w-[500px] text-center py-4 dark:text-white text-lg leading-relaxed"
+          >
+            Game of Life is een in 1970 door de Britse wiskundige John Conway
+            bedachte cellulaire automaat, een tweedimensionaal raster met
+            vierkante 'cellen' die 'levend' of 'dood' kunnen zijn, en die zich
+            volgens vastgestelde regels ontwikkelen en daarbij allerlei patronen
+            kunnen vormen. Conway heeft veel geëxperimenteerd met verschillende
+            sets met regels om een goede balans te vinden. Met de verkeerde
+            regels zouden namelijk meer cellen 'geboren' worden dan 'dood' gaan
+            waardoor het hele raster 'levend' wordt, of er gaan juist zoveel
+            cellen dood dat het hele gebied 'dood' wordt.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--footer container-->
+    <footer class="flex justify-end w-full fixed bottom-0 left-0 z-20">
+      <div class="flex">
+        <div class="flex rounded-full">
+          <i
+            class="fa fa-twitter-square bg-greywhite rounded-full"
+            style="font-size: 30px"
+          ></i>
+          <i
+            class="fa fa-facebook-square mx-5 bg-greywhite rounded-full"
+            style="font-size: 30px"
+          ></i>
+          <i
+            class="fa fa-github-square mr-5 bg-greywhite rounded-full"
+            style="font-size: 30px"
+          ></i>
+          <i
+            class="fa fa-linkedin-square bg-greywhite rounded-full"
+            style="font-size: 30px"
+          ></i>
+        </div>
+      </div>
+    </footer>
     <script src="./bord/script.js" async defer></script>
   </body>
 </html>
