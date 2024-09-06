@@ -33,3 +33,9 @@ Controls:
 - Dark mode: Toggle between light and dark themes.
 - Color palette: Choose from a variety of colors for the cells.
 - Presets: Load predefined patterns.
+
+## Technologies
+
+- JavaScript
+- HTML / CSS
+- Tailwind
