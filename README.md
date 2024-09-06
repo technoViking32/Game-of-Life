@@ -70,10 +70,14 @@ Akram:
   * Anouk: Heeft zeker wel 70% van alle front-end code geschreven, daarnaast heeft  ze mij ook vaak geholpen als ik iets niet begreep. Echt heel fijn om in ons te team hebben! 
 
 Jadon:
-- Wat ging er goed?:
-- Wat kon er beter?:
+- Wat ging er goed?: Ik vond de communicatie goed gaan tussen ons, ik wist altijd wie wat deed. Daarnaast vond ik de tempo ook erg goed. 
+- Wat kon er beter?: We hadden veel ideeën in het begin, waardoor het lastig werd om gewoon te beginnen. Het zou beter zijn geweest als we simpelweg met de basics waren begonnen. 
 
 - Individuele feedback:
+  * Anouk: De enige echte engel van ons team en ze was heel goed in het maken van de front-end. Ze was heel goed bezig en had veel kennis.
+  * Dymoreno: Hij kwam met gekke ideeën en ook al kwam ik met geavanceerde dingen, hij leerde en paste zich snel aan.
+  * Akram: Goede leider, goeie support voor Anouk en hij hield het moreel hoog.
+
 
 Made by Jadon, Anouk, Dymoreno and Akram. 
 Artemis 12
