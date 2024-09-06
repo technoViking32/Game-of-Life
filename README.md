@@ -39,4 +39,8 @@ Controls:
 - HTML / CSS
 - Tailwind
 
+Made by Jadon, Anouk, Dymo and Akram. 
+Artemis 12
+Bit Academy 💡
+
 
