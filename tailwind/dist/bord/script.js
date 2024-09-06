@@ -102,6 +102,12 @@ function setupControlButtons() {
 
     let randomButton = document.getElementById("random");
     randomButton.onclick = randomButtonHandler;
+
+    let gliderButton = document.getElementById("gliderPattern");
+    gliderButton.onclick = gliderButtonHandler;
+
+    let vampireButton = document.getElementById("vampirePattern");
+    vampireButton.onclick = vampireButtonHandler;
 }
 
 function randomButtonHandler() {
@@ -265,3 +271,74 @@ function updateView() {
         }
     }
 }
+
+function glider() {
+    let glider = Array.from({ length: 3 }, () => Array(3).fill(0));
+
+    // glider pattern
+    glider[1][1] = 1;
+    glider[2][2] = 1;
+    glider[0][2] = 1;
+    glider[2][0] = 1;
+    glider[1][0] = 1;
+
+    return glider;
+}
+function vampire() {
+    let vampire = Array.from({ length: 5 }, () => Array(5).fill(0)); // Maak een 5x5 grid
+
+
+    vampire[1][1] = 1;
+    vampire[1][2] = 1;
+    vampire[2][1] = 1;
+    vampire[2][2] = 1;
+    vampire[3][1] = 1;
+
+    return vampire;
+}
+
+function addPatternToGrid(grid, pattern, x, y) {
+    for (let i = 0; i < pattern.length; i++) {
+        for (let j = 0; j < pattern[i].length; j++) {
+            if (pattern[i][j] === 1) {
+                grid[x + i][y + j] = pattern[i][j];
+            }
+        }
+    }
+}
+
+// glider button
+function gliderButtonHandler() {
+    let pattern = glider();
+    // Plaats van de glider op de grid
+    addPatternToGrid(grid, pattern, 15, 13);
+    addPatternToGrid(grid, pattern, 15, 10);
+    addPatternToGrid(grid, pattern, 18, 13);
+    addPatternToGrid(grid, pattern, 16, 16);
+    addPatternToGrid(grid, pattern, 15, 34);
+    addPatternToGrid(grid, pattern, 15, 31);
+    addPatternToGrid(grid, pattern, 18, 34);
+    addPatternToGrid(grid, pattern, 16, 37);
+    addPatternToGrid(grid, pattern, 15, 54);
+    addPatternToGrid(grid, pattern, 15, 51);
+    addPatternToGrid(grid, pattern, 18, 54);
+    addPatternToGrid(grid, pattern, 16, 57);
+    updateView();
+}
+
+
+function vampireButtonHandler() {
+    let pattern = vampire();
+    addPatternToGrid(grid, pattern, 10, 12);
+    addPatternToGrid(grid, pattern, 10, 14);
+    addPatternToGrid(grid, pattern, 10, 16);
+    addPatternToGrid(grid, pattern, 10, 18);
+    addPatternToGrid(grid, pattern, 14, 12);
+    addPatternToGrid(grid, pattern, 14, 14);
+    addPatternToGrid(grid, pattern, 14, 16);
+    addPatternToGrid(grid, pattern, 14, 18);
+    addPatternToGrid(grid, pattern, 12, 19);
+    updateView();
+}
+
+window.onload = initialize;
