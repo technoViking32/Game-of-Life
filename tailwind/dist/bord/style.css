@@ -24,3 +24,70 @@ td.live {
     background-color: #27e712;
     border-radius: 10px;
 }
+
+#theme-switch {
+    height: 50px;
+    width:50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch svg {
+    fill: #000000;
+}
+
+#theme-switch svg:last-child {
+    display: none;
+    fill: rgb(204 204 204);
+}
+
+.dark #theme-switch svg:first-child {
+    display: none;
+}
+
+.dark #theme-switch svg:last-child {
+    display: block;
+}
+
+.popup-container[open] .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay effect */
+    z-index: 10;
+    fill: black;
+  }
+  
+  .popup-container[open] .popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20; /* Ensure it's above the overlay */
+    max-width: 90%; /* Limits the width on smaller screens */
+    max-height: 90%; /* Limits the height on smaller screens */
+    overflow-y: auto; /* Ensures scrollable content if the popup is too big */
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  
+  .popup-container summary {
+    list-style: none; /* Remove the default triangle */
+  }
+  
+  .popup-container summary:hover {
+    
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-svg {
+    stroke: #40e0d0; /* Turquoise color */
+  }
+  
+

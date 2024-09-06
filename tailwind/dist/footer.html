@@ -16,22 +16,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="./bord/script.js" async defer></script>
+    <script src="./darkmode.js" async defer></script>
+    
+    
   </head>
   <body class="bg-[#f0f0f0] dark:bg-[#242424]">
     <!--navbar with submenu-->
-    <div class="dark:bg-[#1d1c1d] h-full">
+    <div class="dark:bg-[#1d1c1d] pb-16">
       <nav class="bg-darkgreen font-['handjet']">
         <div
           class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-6"
         >
           <a
             href="index.html"
-            class="text-turquoise text-7xl font-['handjet'] dark:text-[#aa1fa1]"
+            class=" text-7xl font-['handjet'] text-turquoise dark:text-[#aa1fa1] "
             >Game of life</a
           >
           <button
             href="#login"
-            class="text-turquoise text-2xl dark:text-[#aa1fa1]"
+            class="text-turquoise text-2xl dark:text-[#aa1fa1] mr-1"
           >
             Login
           </button>
@@ -41,40 +45,125 @@
       <nav class="bg-greywhite shadow-lg dark:bg-winered">
         <div class="max-w-screen-xl px-4 py-3 mx-auto">
           <div class="flex items-center justify-end">
-            <ul class="flex flex-row font-medium text-md">
+            <ul class="flex flex-row font-medium text-lg items-center">
               <li>
-                <button
-                  href="#"
-                  class="text-winered hover:underline mr-8 dark:text-greywhite"
-                >
-                  Darkmode
-                </button>
+                <div class="justify-center text-black">
+                  <details class="popup-container ">
+                    <summary
+                      class="bg-blue-500 rounded-2xl block px-6 py-4 text-xl  hover:cursor-pointer "
+                    >
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black" class="dark:fill-greywhite"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                        />
+                      </svg>
+                    
+                    </summary>
+                
+                    <!-- Backdrop for the popup -->
+                    <div class="popup-overlay"></div>
+                
+                    <!-- Popup content -->
+                    <div class="popup-content bg-white dark:bg-darkgreen rounded-2xl  my-auto mx-auto absolute inset-0 text-gray-600 p-4 py-8">
+                      <!-- Close button -->
+                      <span
+                        onclick="document.querySelector('details').removeAttribute('open')"
+                        class="bg-gray-400 rounded-full flex items-center justify-center text-3xl font-bold uppercase absolute right-0 top-0 w-10 h-10 text-white hover:bg-blue-200 hover:duration-200 cursor-pointer"
+                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black" class="dark:fill-white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                      </span>
+                
+                      <!-- Title -->
+                      <h1 class="text-2xl text-center text-black font-bold dark:text-white mt-6 mb-10">
+                        Game of Life - Rules
+                      </h1>
+                
+                      <!-- Rules content -->
+                      <div class="flex justify-around mt-4 ">
+                        <!-- Left Column -->
+                        <div class="flex flex-col space-y-4 w-1/2  dark:text-white">
+                          <h3 class="text-2xl text-left text-black font-bold">
+                            For a space that is populated:
+                          </h3>
+                          <p class="text-left text-black py-8">
+                            Each cell with one or no neighbors dies, as if by solitude.
+                          </p>
+                          <p class="text-left text-black py-12">
+                            Each cell with four or more neighbors dies, as if by overpopulation.
+                          </p>
+                          <p class="text-left text-black py-12">
+                            Each cell with two or three neighbors survives.
+                          </p>
+                          <h3 class="text-2xl text-left text-black font-bold py-2">
+                            For a space that is empty or unpopulated:
+                          </h3>
+                          <p class="text-left text-black py-6">
+                            Each cell with three neighbors becomes populated.
+                          </p>
+                        </div>
+                
+                        <!-- Right Column with images -->
+                        <div class="flex flex-col w-1/3">
+                          <img src="./regel 1 afbeelding.png" alt="Rule 1 Image" class="py-1"/>
+                          <img src="./regel 2 afbeelding.png" alt="Rule 2 Image" class="py-1"/>
+                          <img src="./regel 3 afbeelding.png" alt="Rule 3 Image" class="py-1"/>
+                          <img src="./regel 4 afbeelding.png" alt="Rule 4 Image" class="py-1"/>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+                </div>
               </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-winered hover:underline mr-2 dark:text-greywhite"
-                  >Rules</a
+              <button
+                href="#"
+                class="text-winered hover:underline dark:text-greywhite"
+                id="theme-switch"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
                 >
-              </li>
+                  <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
+                  class="text-white"
+                >
+                  <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+                  />
+                </svg>
+              </button>
             </ul>
           </div>
         </div>
       </nav>
 
       <!--Flexbox/ game met reclame-->
-      <div class="mt-10 p-4">
-        <div class="flex flex-row">
+      <div class="mt-10">
+        <div class="flex justify-around">
           <!--reclame 1-->
-          <div class="basis-1/6 mx-4 px-2">
+          <div class="mx-4">
             <img
               src="https://www.eyestylist.com/wp-content/uploads/2024/01/GIGI_EYESTYLIST_DESK.gif"
-              alt=""
-              class="w-full h-full"
+              alt="reclame"
+              class="w-[300px] h-[900px]"
             />
           </div>
           <!--Game moet hier in geplaatst worden-->
-          <div class="basis-[66%]">
+          <div>
             <div id="gridContainer" class="w-full flex justify-center"></div>
 
             <div class="controls text-center flex justify-around">
@@ -115,11 +204,11 @@
             </div>
           </div>
           <!--reclame 2-->
-          <div class="basis-1/6 mx-4 px-2">
+          <div class="mx-4">
             <img
               src="https://mnamin24.github.io/gifer-gif-animated-banner-template/images/300x600.gif"
-              alt=""
-              class="w-full h-full"
+              alt="reclame"
+              class="w-[300px] h-[900px]"
             />
           </div>
         </div>
@@ -128,84 +217,89 @@
 
     <!--Info over conway en de game zelf-->
     <div
-      class="bg-greywhite dark:bg-gradient-to-r dark:from-turquoise dark:to-darkgreen py-10 text-center "
+      class="bg-greywhite dark:bg-gradient-to-b dark:from-darkgreen dark:to-turquoise py-16 text-center"
     >
-    <h1 class="text-4xl mb-10">History</h1>
-      <div
-        class="flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0 md:space-x-6 "
-      >
-      
+      <h1 class="text-5xl font-bold mb-6 dark:text-white">History</h1>
+      <p class="text-lg mb-16 text-gray-500 dark:text-gray-300 dark:text-white">
+        Learn about John Horton Conway and his Game of Life
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-16">
+        <!-- Conway Section -->
         <div
-          class="flex flex-col items-center transform transition duration-500 hover:scale-105"
+          class="transform transition duration-500 hover:scale-105 flex justify-center items-center flex-col"
         >
           <img
             src="https://static.scientificamerican.com/sciam/cache/file/9DB31FFE-197B-4787-A1E7D099F35B0873_source.jpg?crop=16%3A9%2Csmart&w=1920"
-            alt=""
-            class="w-[600px] h-[350px] rounded-lg shadow-2xl hover:shadow-sm"
+            alt="John Horton Conway"
+            class="w-[800px] h-[450px] object-cover rounded-lg shadow-xl hover:shadow-md transition duration-300"
           />
-          <p
-            class="w-[500px] text-center py-4 dark:text-white text-lg leading-relaxed"
-          >
-            John Horton Conway was een Brits wiskundige, die veel publicaties op
-            zijn naam heeft staan. Hij was actief in verschillende deelgebieden
-            van de wiskunde, zoals de groepentheorie, cryptografie, meetkunde en
-            getaltheorie. Hij bedacht onder meer de surreële getallen. Conway
-            heeft aan de Universiteit van Cambridge gestudeerd, bleef daar tot
-            1986 college geven, maar werd dat jaar hoogleraar in de wiskunde aan
-            de Universiteit van Princeton. Hij was sinds 1981 Fellow of the
-            Royal Society. Hij overleed op 11 april 2020, drie dagen nadat hij
-            koorts had gekregen ten gevolge van COVID-19.
+          <p class="text-lg py-10 dark:text-white leading-relaxed">
+            John Horton Conway was a British mathematician known for his work in
+            several branches of mathematics, including group theory,
+            cryptography, geometry, and number theory. He is best known for
+            inventing the surreal numbers and the Game of Life. Conway passed
+            away on April 11, 2020, due to COVID-19.
           </p>
+          <a
+            href="#"
+            class="text-winered hover:text-pink dark:text-white font-semibold"
+            >Read More →</a
+          >
         </div>
 
+        <!-- Game of Life Section -->
         <div
-          class="flex flex-col items-center transform transition duration-500 hover:scale-105"
+          class="transform transition duration-500 hover:scale-105 flex flex-col justify-center items-center"
         >
           <img
             src="https://conwaylife.com/w/images/b/b6/Gosperglidergun.gif"
-            alt=""
-            class="w-[600px] h-[350px] rounded-lg shadow-2xl hover:shadow-sm"
+            alt="Game of Life"
+            class="w-[800px] h-[450px] object-cover rounded-lg shadow-xl hover:shadow-md transition duration-300"
           />
-          <p
-            class="w-[500px] text-center py-4 dark:text-white text-lg leading-relaxed"
-          >
-            Game of Life is een in 1970 door de Britse wiskundige John Conway
-            bedachte cellulaire automaat, een tweedimensionaal raster met
-            vierkante 'cellen' die 'levend' of 'dood' kunnen zijn, en die zich
-            volgens vastgestelde regels ontwikkelen en daarbij allerlei patronen
-            kunnen vormen. Conway heeft veel geëxperimenteerd met verschillende
-            sets met regels om een goede balans te vinden. Met de verkeerde
-            regels zouden namelijk meer cellen 'geboren' worden dan 'dood' gaan
-            waardoor het hele raster 'levend' wordt, of er gaan juist zoveel
-            cellen dood dat het hele gebied 'dood' wordt.
+          <p class="text-lg py-10 dark:text-white leading-relaxed">
+            The Game of Life, created by British mathematician John Conway in
+            1970, is a cellular automaton consisting of a two-dimensional grid
+            with cells that can be "alive" or "dead". These cells evolve
+            according to specific rules and can form various patterns over time.
+            One interacts with the Game of Life by creating an initial
+            configuration and observing how it evolves.
           </p>
+          <a
+            href="#"
+            class="text-winered hover:text-pink dark:text-white font-semibold"
+            >Explore Game of Life →</a
+          >
         </div>
       </div>
     </div>
 
     <!--footer container-->
-    <footer class="flex justify-end w-full fixed bottom-0 left-0 z-20">
-      <div class="flex">
-        <div class="flex rounded-full">
-          <i
-            class="fa fa-twitter-square bg-greywhite rounded-full"
-            style="font-size: 30px"
-          ></i>
-          <i
-            class="fa fa-facebook-square mx-5 bg-greywhite rounded-full"
-            style="font-size: 30px"
-          ></i>
-          <i
-            class="fa fa-github-square mr-5 bg-greywhite rounded-full"
-            style="font-size: 30px"
-          ></i>
-          <i
-            class="fa fa-linkedin-square bg-greywhite rounded-full"
-            style="font-size: 30px"
-          ></i>
-        </div>
+    <footer>
+      <div class="flex bg-greywhite dark:bg-turquoise w-full p-2">
+        <p class="opacity-40 text-darkgreen ml-4 dark:text-white">
+          ©MADE BY JADA
+        </p>
       </div>
     </footer>
-    <script src="./bord/script.js" async defer></script>
+    <div class="flex rounded-full mr-5 fixed bottom-1 right-0">
+      <i
+        class="fa fa-twitter-square bg-greywhite dark:bg-darkgreen dark:text-white"
+        style="font-size: 30px"
+      ></i>
+      <i
+        class="fa fa-facebook-square mx-5 bg-greywhite dark:bg-darkgreen dark:text-white"
+        style="font-size: 30px"
+      ></i>
+      <i
+        class="fa fa-github-square mr-5 bg-greywhite dark:bg-darkgreen dark:text-white"
+        style="font-size: 30px"
+      ></i>
+      <i
+        class="fa fa-linkedin-square bg-greywhite dark:bg-darkgreen dark:text-white"
+        style="font-size: 30px"
+      ></i>
+    </div>
+    
   </body>
 </html>

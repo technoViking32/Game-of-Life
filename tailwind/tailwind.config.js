@@ -11,7 +11,10 @@ module.exports = {
       'white': '#ffffff'
     },
   },
+  variants: {
+    fill: ['dark'], // Enable dark variant for fill
+  },
   plugins: [],
-  darkMode:"class",
+  darkMode:'class',
 }
 
