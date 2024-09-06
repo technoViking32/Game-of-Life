@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Game of life</title>
+    <link
+            rel="icon"
+            href=
+"https://play-lh.googleusercontent.com/4xtboOCl4G36He2_RUaYhI9v_eDIoXara2hAxDi99f1R5MwLjSI1QZ_CT6wLdjCTV3E"
+        />
     <link rel="stylesheet" href="output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,7 +56,7 @@
                 <details class="open">
                     <!-- Knop zichtbaar maken -->
                     <summary
-                      class="bg-blue-rounded-2xl block px-6 py-4 text-xl hover:duration-300 hover:text-white cursor-pointer"
+                      class="bg-blue-rounded-2xl block px-6 py-4 text-xl hover:duration-300 hover:text-white cursor-pointer dark:text-greywhite"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -71,12 +76,12 @@
             
                     <!-- Content is pas te zien als de user erop klikt. -->
                     <div
-                      class="bg-white rounded-2xl w-[90%] h-[90%] my-auto mx-auto absolute inset-0 text-gray-600 p-4 py-8"
+                      class="bg-white rounded-2xl w-[90%] h-[90%] my-auto mx-auto absolute inset-0 text-gray-600 p-4 py-8 dark:bg-darkgreen"
                     >
                       <!-- Sluiten van pop up scherm-->
                       <span
                         onclick="document.querySelector('details').removeAttribute('open')"
-                        class="bg-gray-400 rounded-full flex items-center justify-center text-3xl font-bold uppercase absolute -right-4 -top-4 w-10 h-10 text-white hover:bg-blue-200 hover:duration-200 cursor-pointer"
+                        class="bg-gray-400 rounded-full flex items-center justify-center text-3xl font-bold uppercase absolute right-0 top-0 w-10 h-10 text-black hover:bg-blue-200 hover:duration-200 cursor-pointer dark:text-greywhite"
                       >
                         X
                       </span>
@@ -84,13 +89,13 @@
                       <!-- Titel -->
                       <div>
                         <div class="overflow-y-auto">
-                          <h1 class="text-2xl text-center text-black font-bold">
+                          <h1 class="text-2xl text-center text-black font-bold mb-10 dark:text-greywhite">
                             Game of Life - Rules
                           </h1>
                         </div>
                         <!--Regels aan de linkerkant-->
                         <div class="flex justify-around">
-                        <div class="flex flex-col space-y-12">
+                        <div class="flex flex-col space-y-12 dark:text-greywhite">
                           <div>
                             <h3 class="text-2xl text-left text-black font-bold">
                               For a space that is populated:
@@ -126,7 +131,7 @@
                         <!--afbeeldingen aan de rechterkant-->
                         <div class="flex-col w-[320px] h-[50px]">
                           <div>
-                            <img src="regel 1 afbeelding.png" alt="Game of Life rule img" />
+                            <img src="regel 1 afbeelding.png" alt="Game of Life rule img"/>
                           </div>
                           <div>
                             <img src="regel 2 afbeelding.png" alt="Game of Life rule img" />
