@@ -7,7 +7,7 @@ A web-based implementation of Conway's Game of Life, a classic cellular automato
 
 git clone https://github.com/technoViking32/Game-of-Life.git
 
-Open the index.html file: Open the index.html file in your preferred web browser.
+Go to folder "tailwind" > "dist" > home.html
 
 ## How it works
 How it works
@@ -35,7 +35,8 @@ Controls:
 - Presets: Load predefined patterns.
 
 ## Technologies
-
 - JavaScript
 - HTML / CSS
 - Tailwind
+
+
